@@ -1,3 +1,4 @@
+
 # **Arduino @ Google Summer of Code 2020 Proposal**
 
 ## **Project: Write Examples For Official Libraries**
@@ -19,7 +20,7 @@
 
 ### Abstract
 
-Right from beginner to all time pros, everyone starts a new project implementation with an idea in mind primarily and the intense drive to code secondly. To make this task of coding easier, every official library (even unofficial ones should) contains examples- leveraging basic syntax and functionality. Basically, they are a base code collection that makes it easy for the user to connect and to test a sensor, display, module, or any hardware (or even software service functionality) and focus on the "idea" instead. This project aims at adding adding improving appropriate examples to existing official libraries.
+Right from beginner to all time pros, everyone starts a new project implementation with an idea in mind primarily and the intense drive to code secondly. To make this task of coding easier, every official library (even unofficial ones should) contains examples- leveraging basic syntax and functionality. Basically, they are a basic code collection that makes it easy for the user to connect and to test a sensor, display, module, or any hardware (or even software service functionality) and focus on the "idea" instead. This project aims at adding adding and improving appropriate examples to existing official libraries.
 
 ### Technical Details
 
@@ -52,7 +53,7 @@ while i < loopEnd:
 ```
  
 
-This prints out all the repositories. [Note: for some reason the github api returned 30 repositories and I'll be opening a issue for this]
+This prints out all the repositories.
 
 Furthermore, I used the [Google Sheets Api](https://developers.google.com/sheets/api) to formulate the following sheet automatically (kindly refer to the link)-
 
@@ -61,7 +62,7 @@ https://docs.google.com/spreadsheets/d/1LOpYnRRaj5A0UoGtOMZDg1WZ_abkdnXNdqQl3q_z
 Here I have mentioned all the libraries with the number of examples each have.
 
  - The ones with zero are marked absent. 
- - Ones having equal six or more relevant examples are marked sufficient
+ - Ones having six or more relevant examples are marked sufficient
  - Others are marked accordingly.
 
 This will help me and mentors to funnel down to which exact libraries to focus on.
@@ -80,7 +81,7 @@ With the COVID-19 lock-downs, I am in my hometown with minimum physical hardware
 
 #### **Demo Example Name:** SimpleSiren
 
-Description (added to SimpleSiren.txt): Haven't we all used horns / sirens. Just a touch on switch and siren blows. Just a tap back and its stops honking. This library provides just this. A bare minimum framework simulating a siren functioning.
+Description (added as SimpleSiren.txt): Haven't we all used horns / sirens. Just a touch on switch and siren blows. Just a tap back and its stops honking. This library provides just this. A bare minimum framework simulating a siren functioning.
 
 Components needed (added to SimpleSiren.ino header comments): Arduino board (UNO used to demonstrate), Push button switch, 10k Ohm Resistor, 220 Ohm Resistor, Buzzer.
 
@@ -88,12 +89,15 @@ Appropriate place to be added:
 https://github.com/arduino/Arduino/tree/master/build/shared/examples/02.Digital/SimpleSiren
 
 Layout (added as layout.png): An image showing how connections have to be made. This layout was created using [Fritzing](https://fritzing.org/home/). 
+
 ![Layout.png](https://drive.google.com/file/d/1NOqEI5awx0pS5KBmi1cFsqaoITD3Kt0X/view?usp=sharing)
+
 Link to Layout.png- 
 https://drive.google.com/file/d/1NOqEI5awx0pS5KBmi1cFsqaoITD3Kt0X/view?usp=sharing
 
 Schematic (added as schematic.png):  An image showing the schematic diagram of an UNO with SimpleSiren setup.
 ![Schematic.png](https://drive.google.com/file/d/141HdATR8_6ggbrRTScs8v9CQuTajhFSN/view?usp=sharing)
+
 Link to Scehmatic.png- 
 https://drive.google.com/file/d/141HdATR8_6ggbrRTScs8v9CQuTajhFSN/view?usp=sharing
 
@@ -155,15 +159,15 @@ void loop() {
 As a demonstration of familiarity with git and GitHub, I've created a pull request with the above mentioned additions on official Arduino repository-
 Link to pull: https://github.com/arduino/Arduino/pull/9920
 
-The same code has been uploaded to Arduino Project Hub with compliance to all contributing and content guidelines demonstrating the its understanding and importance. Link-
+The same code has been uploaded to Arduino Project Hub with compliance to all contributing and content guidelines demonstrating the understanding and importance Project Hub. Link-
 https://create.arduino.cc/projecthub/misterawesome23/simplesiren-de8f43?ref=user&ref_id=1506630&offset=0
 
 
-### Illustration intermediate / advanced example for an official library [ArduinoGraphics]
+### Illustration of intermediate / advanced example for an official library [ArduinoGraphics]
 
-I also understand that the project not only needs basic example but also require the technical competency to form intermediate and and advanced level codes / examples. To demonstrate this, I have used [ArduinoGraphics]([https://github.com/arduino-libraries/ArduinoGraphics](https://github.com/arduino-libraries/ArduinoGraphics))  to formulate an intermediate / advanced example.
+I also understand that the project not only needs basic examples but also require the technical competency to form intermediate and and advanced level codes / examples. To demonstrate this, I have used [ArduinoGraphics](https://github.com/arduino-libraries/ArduinoGraphics) (which has zero examples currently)  to formulate an intermediate / advanced example.
 
-ArduinoGraphics is a Core graphics library for Arduino. Based on the Processing API. For now it does not have any example which can run on the Arduino serial monitor. It needs an external screen along with its specific hardware interface library to drive the screen but it's graphical primitives can certainly be leveraged without one.
+ArduinoGraphics is a Core graphics library for Arduino based on the Processing API. For now it does not have any example which can run on the Arduino serial monitor. It needs an external screen along with its specific hardware interface library to drive the screen but it's graphical primitives can certainly be leveraged without one.
 
 Special thanks to [Prcoessing]([[https://processing.org/](https://processing.org/)) for the Hello Processing tutorial to introduce to processing, the syntax on which ArduinoGraphics library is heavily based on. Also, [adafruit-gfx-graphics-library]([https://learn.adafruit.com/adafruit-gfx-graphics-library/graphics-primitives](https://learn.adafruit.com/adafruit-gfx-graphics-library/graphics-primitives)) provided a good reference. Finally, thanks to one of our community member **per1234** (gitHubHandle) for helping me with this example for providing resources for formulating the initial code framework. 
 
@@ -178,17 +182,17 @@ Code- (MarqueeGSoC.ino)
   Code samples in the reference are released into the public domain.
 */
 
-//Include ArduinoGraphics library from Sketch -> Include library
+// Include ArduinoGraphics library from Sketch -> Include library
 // or download and https://github.com/arduino-libraries/ArduinoGraphics add zip
 #include <ArduinoGraphics.h>
 
 
-//Initalise canvas
+// Initalise canvas
 const byte canvasWidth = 61;
 const byte canvasHeight = 27;
 
 
-//Make ASCIIDrawClass class whose object can access ArduinoGraphics functions
+// Make ASCIIDrawClass class whose object can access ArduinoGraphics functions
 class ASCIIDrawClass : public ArduinoGraphics {
   public:
     // can be used with an object of any class that inherits from the Print class
@@ -268,7 +272,7 @@ void setup() {
 void loop() {}
 ```
 
-Also, The code above written code follows all coding and contribution guidelines for Ardiuno and code formatting should be consistent with the style used in the existing code for ArduinoGraphics.
+Also, the code above written code follows all coding and contribution guidelines for Ardiuno and code formatting is consistent with the style used in the existing code for ArduinoGraphics.
 
 **Working Screenshots and Video:**
 
@@ -294,7 +298,7 @@ Examples should work as boilerplate codes to extend application to other project
 5. **Expected Output:**  
 It should be provided with the examples to ensure proper functioning of the device and configurations on  a basic or initial level.
 6. **Larger syntax  coverage:**  
-For intermediate and advanced a larger functionality and  syntax coverage is desirable.
+For intermediate and advanced examples a larger functionality and  syntax coverage is desirable.
 
 
 
@@ -327,26 +331,26 @@ For intermediate and advanced a larger functionality and  syntax coverage is des
  1. Get familiar with the Style-guide and contribution guidelines for the Arduino community.
  2. Discuss and finalize plan or timeline with my mentor.
  3. Plan platform of communication for weekly calls/meetings, to submit my weekly report to the mentor (also finalize on report formats- Example: A [GitHub blog](https://github.blog/)).
- 4. Plan my work time-table for your summer.
+ 4. Plan my work time-table for summer.
  5. Most importantly, get innately involved in the community like a family member :)
 
 #### **Phase 1 (June 1, 2020 - July 3, 2020)**
 
 * Deliverable 1
-	* Week 1- Library One resource collection and familiarization. Draft examples and implementation.
+	* Week 1- **Library One** resource collection and familiarization. Draft examples and implementation.
 	* Week 2- Finalize the example and fix problems for example along with a projectHub submission of the library.
 * Deliverable 2
-	* Week 3- Library Two working. Adjust working hours and styles with reference to Library One. Change buffer time and methodologies.
+	* Week 3- **Library Two** working. Adjust working hours and styles with reference to Library One. Change buffer time and methodologies.
 	* Week 4- Fix problems in the added examples and work on prototype examples.
 
 
 #### **Phase 2 (July 4, 2020 - July 31, 2020)**
 
 * Deliverable 3
-	* Week 5- Library Three resource collection and familiarization. Focus on improving the efficiency of work from Week 1-4 learning's.
+	* Week 5- **Library Three** resource collection and familiarization. Focus on improving the efficiency of work from Week 1-4 learning's.
 	* Week 6- Fix bugs and issues suggested by mentor and community. Proceed to projectHub possibilities.
 * Deliverable 4
-	* Week 7- Library FOUR resource collection and familiarization. Create examples and draft formal implementation diagrams for the respective example.
+	* Week 7- **Library FOUR** resource collection and familiarization. Create examples and draft formal implementation diagrams for the respective example.
 	* Week 8- Fix issues with newly added example and build a basic hardware prototype displaying the usage of added example.
 
 #### **Phase 3 (August 1, 2020 - August 23, 2020)**
@@ -388,12 +392,12 @@ https://is.gd/ManthanArduinoGSoCResume
 ### Why this project?
 
 
-I have been applying to GSoC for past two years (not selected). One thing I've learned is- its all about Open Source Contributions and being a selfless contributor. Self learning and everything else are just supplementary positive add-ons. I personally have know Arduino since my childhood and I would choose contributing to something I consume than to work for something I have no direct co-relations to. This year I will be applying to one organisation and only one project-  Write Examples For Official Libraries. I want to keep my area of work as niche as possible and contribute as much as I can no matter how small or big. Also, even if I do not get selected for GSoC2020 (which I really want be selected for) I'll continue with Arduino as my organisation and start for Google Summer of Docs 2020 abiding by my want to be innately connected to an open source community.
+I have been applying to GSoC for past two years (not selected). One thing I've learned is- its all about Open Source Contributions and being a selfless contributor majorly. Self learning and everything else are just supplementary positive add-ons. I personally have know Arduino since my childhood and I would choose contributing to something I consume than to work for something I have no direct co-relations to. This year I will be applying to one organisation and one project only- Write Examples For Official Libraries. I want to keep my area of work as niche as possible and contribute as much as I can no matter how small or big. Also, even if I do not get selected for GSoC2020 (which I really want be selected for) I'll continue with Arduino as my organisation and start for Google Summer of Docs 2020 abiding by my want to be innately connected to an open source community.
 
 ### Do you have any other commitments during the GSoC period?
 
 
-- I will be having my university practical examinations for four days and university final year written examinations (four exams). Because of the ongoing COVID-19 pandemic the dates are not consolidated.
+- I will be having my university practical examinations for two days and university final year written examinations (four exams). Because of the ongoing COVID-19 pandemic the dates are not consolidated.
 - I will be starting my Masters in Management Information System Fall 2020 at Texas A&M. Dates not announced.
 
 
