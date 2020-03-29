@@ -309,7 +309,12 @@ For intermediate and advanced examples a larger functionality and  syntax covera
 3. https://github.com/arduino-libraries/USBHost/issues/14
 4. https://github.com/arduino-libraries/AudioFrequencyMeter/issues/15
 5. https://github.com/arduino-libraries/ArduinoGraphics/pull/14#pullrequestreview-382503771
-6. [https://forum.arduino.cc/index.php?topic=673524.0](https://forum.arduino.cc/index.php?topic=673524.0)
+6. https://forum.arduino.cc/index.php?topic=673524.0
+7. https://github.com/arduino-libraries/Arduino_CRC32/pull/6
+8. https://github.com/arduino-libraries/NTPClient/issues/92
+9. https://github.com/arduino-libraries/NTPClient/issues/91
+10. https://github.com/arduino-libraries/NTPClient/issues/89 
+11. https://github.com/arduino-libraries/NTPClient/issues/87
 
 
 
